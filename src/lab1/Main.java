@@ -1,4 +1,7 @@
 package lab1;
+import lab1.ch2.ch2;
+import lab1.ch3.ch3;
+import lab1.ch4.ch4;
 
 public class Main {
     private static int semester=2;
@@ -10,63 +13,30 @@ public class Main {
    // cf.AutoBox(nr);
    // stringExample();
    //fuzzBuzz(100);
-       compute(100);
-    }
-    public static void stringExample(){
-        String s="Java";
-        s=s.concat(" Code");
-        System.out.println(s);
-    }
-
-    private static void fuzzBuzz(int incercari){
-        for(int i=1;i<=incercari;i++)
+        ch2 c2= new ch2();
+        int j;
+        for(j=1;j<=100;j++)
         {
-            if(((i%3)==0)&&((i%5)==0))
-                System.out.println("FizzBuzz");
-            else if((i%3)==0)
-                System.out.println("Fizz");
-            else if((i%5)==0)
-                System.out.println("Buzz");
-            else
-                System.out.println(i);
-
+            System.out.println(c2.compute(j));
         }
-    }
+        System.out.println("\n\n");
+
+        ch3 c3=new ch3();
+        int arr[]={3,2,-3,-2,3,0};
+        System.out.println(c3.pairOfTwo(arr));
 
 
-    private static void compute(int incercari)
-    {
-        for(int i=1;i<incercari;i++)
-        {
-            int n;
-            n=10;
-            int b;
-            b=i;
-            /*while(b!=0)
-            {
-                if(b%10==3)
-                    System.out.print("Foo");
-                b=b/n;
-                n=n*10;
-
-            }*/
-
-                if ((i % 3) == 0)
-                    System.out.println("SOTT");
-                else if ((i % 5) == 0)
-                    System.out.println("Bar");
-                else if ((i % 7) == 0)
-                    System.out.println("Qix");
-                else
-                    System.out.println("Foo");
-
-
-
-
-
-
-         }
+        ch4 c4= new ch4();
+        int arr2[]={3,2,2,2,5,3};
+        System.out.println(c4.pairOfThree(arr2));
 
     }
+
+
+
+
+
+
+
 }
 
